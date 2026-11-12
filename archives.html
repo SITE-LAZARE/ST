@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archives - Site Lazare - COO-UNIT-01</title>
+<meta name="description" content="Dossiers historiques et archives scellées du Site Lazare.">
+<meta name="theme-color" content="#6c5ce7">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="ux.css">
+<link rel="stylesheet" href="theme.css">
+<script>try{if(localStorage.getItem('coo_theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+</head>
+<body data-page="archives">
+
+<div class="scanlines"></div>
+<div class="hud-frame">
+  <span class="hud-corner tl"></span><span class="hud-corner tr"></span>
+  <span class="hud-corner bl"></span><span class="hud-corner br"></span>
+</div>
+<div class="hud-tag bl-tag"><span class="hud-dot"></span><span id="hud-clock">--:--:--</span></div>
+<div class="hud-tag br-tag"><span id="hud-opid">OMBRE-????</span></div>
+
+<div class="boot-screen" id="boot" onclick="skipBoot()">
+  <div class="boot-inner">
+    <div class="boot-line" id="boot-text"></div>
+    <div class="boot-progress"><div class="boot-progress-bar" id="boot-bar"></div></div>
+    <div class="boot-id" id="boot-id"></div>
+    <div class="boot-skip">cliquer pour passer</div>
+  </div>
+</div>
+<script>try{if(sessionStorage.getItem('coo_booted')){var _b=document.getElementById('boot');if(_b)_b.parentNode.removeChild(_b);}}catch(e){}</script>
+
+<div class="session-lock" id="session-lock">
+  <div class="session-lock-inner">
+    <div class="session-lock-title">Session expirée</div>
+    <div class="session-lock-text">Accès révoqué par le système après cinq minutes de connexion.</div>
+    <button class="session-lock-btn" onclick="reconnectSession()">Se reconnecter</button>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="showPage('accueil')" role="link" tabindex="0">
+      <span class="logo-img" onclick="skullClick()" role="img" aria-label="Logo"></span>
+      <span class="glitch">COO-UNIT-01</span>
+    </div>
+    <ul class="nav-links">
+      <li><button data-page="accueil" onclick="showPage('accueil')">Accueil</button></li>
+      <li><button data-page="presentation" onclick="showPage('presentation')">Présentation</button></li>
+      <li><button data-page="lore" onclick="showPage('lore')">Lore</button></li>
+      <li><button data-page="relations" onclick="showPage('relations')">Relations</button></li>
+      <li><button class="active" data-page="archives" onclick="showPage('archives')">Archives</button></li>
+      <li><button data-page="registre" onclick="showPage('registre')">Registre</button></li>
+      <li><button data-page="effectifs" onclick="showPage('effectifs')">Effectifs</button></li>
+      <li><button data-page="recrutement" onclick="showPage('recrutement')">Recrutement</button></li>
+      <li><button data-page="journal" onclick="showPage('journal')">Journal</button></li>
+      <li><button data-page="acces" onclick="showPage('acces')" class="nav-restreint">Accès restreint</button></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-search" onclick="openSearch()" aria-label="Rechercher"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg></button>
+      <div class="session-timer" id="session-timer">05:00</div>
+      <button class="nav-burger" onclick="toggleNav()">☰</button>
+      <a class="nav-discord" href="https://discord.gg/tjZvkkUbhM" target="_blank" rel="noopener">Discord</a>
+      <div class="nav-status"><div class="status-dot"></div>ACTIF</div>
+    </div>
+  </div>
+</nav>
+
+<div id="page-archives" class="page active">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="page-eyebrow">☠ SITE LAZARE · ARCHIVES SCELLÉES</div>
+      <h2 class="page-title">Archives Historiques</h2>
+      <p class="page-desc">Dossiers d'incidents majeurs et secteurs condamnés sous autorité du Conseil O5.</p>
+      <span class="stamp stamp-red">Classification Niveau 5</span>
+    </div>
+  </div>
+
+  <div class="content-wrap">
+    <div class="archives-grid">
+
+      <!-- DOSSIER 1 : INCIDENT LAZARE-01 -->
+      <div class="archive-card">
+        <div class="archive-header" onclick="toggleArchive(this)" role="button" tabindex="0">
+          <div class="archive-id">LAZARE-01</div>
+          <div class="archive-title-text">Dossier Historique — Incident LAZARE-01</div>
+          <div class="archive-level" style="color:#ff5252">Niveau 5</div>
+          <div class="archive-toggle">▼</div>
+        </div>
+        <div class="archive-body">
+          <div class="archive-meta">
+            <div class="archive-meta-item">Nature<span>Incident de confinement majeur</span></div>
+            <div class="archive-meta-item">Lieu<span>SITE LAZARE - Secteurs inférieurs</span></div>
+            <div class="archive-meta-item">Statut<span>Terminé - Enquête toujours ouverte</span></div>
+            <div class="archive-meta-item">Autorité<span>Conseil O5</span></div>
+          </div>
+          <div class="archive-text">
+            <span class="archive-field-label">I — Avant le désastre</span>
+            <p>Quelques années après l'ouverture officielle de SITE LAZARE, le complexe connaissait une période de stabilité. Les installations fonctionnaient normalement et les équipes scientifiques poursuivaient leurs recherches sur plusieurs anomalies confinées.</p>
+            <p>Cependant, dans les secteurs inférieurs, une anomalie faisait l'objet d'une surveillance particulière. Son dossier était inaccessible à la majorité du personnel. Son numéro de désignation avait été retiré des registres ordinaires. Les seuls renseignements disponibles indiquaient : <strong>ANOMALIE — DOSSIER LAZARE-01</strong>. La direction avait imposé des restrictions exceptionnelles concernant son confinement : personne ne devait intervenir sans autorisation du haut commandement.</p>
+
+            <span class="archive-field-label">II — Le jour de l'incident</span>
+            <p>À 02 h 43, les systèmes de surveillance du secteur concerné commencèrent à transmettre des données incohérentes. Quelques minutes plus tard, une alarme de confinement retentit dans l'ensemble du complexe. Les portes de sécurité se verrouillèrent automatiquement. Les communications avec plusieurs équipes furent interrompues.</p>
+            <div class="archive-quote">
+              <p>« ALERTE GÉNÉRALE — SITE LAZARE — CODE ROUGE<br>
+              Attention à l'ensemble du personnel. Une situation critique a été détectée dans les secteurs inférieurs. Tous les membres du personnel doivent rejoindre les zones sécurisées autorisées. Les équipes de sécurité sont placées en état d'alerte. Ceci n'est pas un exercice. »</p>
+              <cite>- Message d'urgence du Centre de Contrôle (interrompu peu après)</cite>
+            </div>
+
+            <span class="archive-field-label">III — La perte de contrôle</span>
+            <p>Les premières équipes envoyées pour évaluer la situation rencontrèrent plusieurs problèmes : systèmes de surveillance inutilisables, accès condamnés automatiquement, rapports contradictoires. La direction militaire ordonna la mobilisation générale des forces de sécurité, les équipes médicales furent placées en urgence, les scientifiques reçurent l'ordre de suspendre leurs activités et le personnel administratif fut évacué. Pendant plusieurs heures, SITE LAZARE fonctionna dans un état d'urgence permanent.</p>
+
+            <span class="archive-field-label">IV — L'intervention du Haut Commandement</span>
+            <p>Face à la situation, le Conseil O5 autorisa une intervention exceptionnelle. Toutes les unités disponibles reçurent des ordres prioritaires. La RRT fut mobilisée afin de soutenir la sécurité générale du complexe. Les secteurs touchés furent isolés et les accès non essentiels fermés. Malgré les efforts des équipes, plusieurs parties de l'installation restèrent inaccessibles. Le commandement finit par prendre une décision radicale : abandonner temporairement les secteurs les plus compromis.</p>
+
+            <span class="archive-field-label">V — La fermeture du Secteur-00</span>
+            <p>C'est durant les heures qui suivirent que le Secteur-00 fut mentionné pour la première fois dans les communications officielles. Un ordre provenant directement du Conseil O5 fut transmis :</p>
+            <div class="archive-quote">
+              <p>« ORDRE O5 - PRIORITÉ ABSOLUE — ORDRE DE SCELLEMENT - SECTEUR-00<br>
+              Toutes les opérations concernant le Secteur-00 doivent être immédiatement suspendues. Aucun accès supplémentaire ne sera autorisé. Les communications avec cette installation doivent être interrompues. La priorité absolue reste la préservation de SITE LAZARE. Aucune exception ne sera tolérée. »</p>
+              <cite>- Autorité : Conseil O5</cite>
+            </div>
+
+            <span class="archive-field-label">VI — Après l'incident</span>
+            <p>Après plusieurs heures de crise, les équipes réussirent à rétablir une partie des systèmes du complexe. La direction ordonna une révision complète des protocoles, une modernisation de la surveillance, une restructuration des unités de sécurité et la classification supérieure des archives. L'incident fut déclaré terminé, mais les questions de fond restèrent sans réponse.</p>
+
+            <span class="archive-field-label">VII — Les trois archives interdites</span>
+            <p>› <strong>ARCHIVE 01 (Niveau 5) :</strong> Enregistrement audio du centre de contrôle quelques secondes avant la coupure totale. <em>Statut : Introuvable.</em><br>
+            › <strong>ARCHIVE 02 (Niveau 5) :</strong> Rapport scientifique original concernant l'anomalie responsable, modifié après la crise. <em>Statut : Scellé par le Conseil O5.</em><br>
+            › <strong>ARCHIVE 03 (Niveau 5) :</strong> Dernier rapport du Secteur-00 transmis après sa fermeture officielle. <em>Statut : Classification absolue.</em></p>
+
+            <span class="archive-field-label">VIII — Conséquences et Citation</span>
+            <div class="archive-quote">
+              <p>« Nous pensions avoir construit une installation capable de tout contenir. Ce jour-là, nous avons compris que même les murs de LAZARE avaient leurs limites. »</p>
+              <cite>- Rapport du Directeur de Site, Archives historiques LAZARE-01</cite>
+            </div>
+            <p><strong>Note finale retrouvée au Secteur-00 :</strong> <em>« LAZARE-01 n'était pas le début de l'incident. C'était le moment où nous avons cessé de pouvoir le contrôler. »</em></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DOSSIER 2 : SECTEUR-00 -->
+      <div class="archive-card">
+        <div class="archive-header" onclick="toggleArchive(this)" role="button" tabindex="0">
+          <div class="archive-id">SECTEUR-00</div>
+          <div class="archive-title-text">Secteur-00 — Le Secteur Oublié</div>
+          <div class="archive-level" style="color:#ff5252">Niveau 5</div>
+          <div class="archive-toggle">▼</div>
+        </div>
+        <div class="archive-body">
+          <div class="archive-meta">
+            <div class="archive-meta-item">Nom officieux<span>Le Secteur oublié</span></div>
+            <div class="archive-meta-item">Localisation<span>Sous les fondations de SITE LAZARE</span></div>
+            <div class="archive-meta-item">Statut<span>Condamné / Accès Interdit</span></div>
+            <div class="archive-meta-item">Personnel autorisé<span>Conseil O5 uniquement</span></div>
+          </div>
+          <div class="archive-text">
+            <span class="archive-field-label">I — Les origines du Secteur-00</span>
+            <p>Avant même l'ouverture officielle de SITE LAZARE, les plans de construction contenaient une anomalie administrative. Un secteur entier apparaissait sur les plans souterrains, sans aucune information sur sa fonction, portant simplement la mention <strong>SECTEUR-00</strong>.</p>
+            <p>Les ingénieurs reçurent l'ordre de bâtir ses infrastructures avant même l'achèvement du reste du complexe. Les ouvriers affectés au chantier furent progressivement remplacés et leurs dossiers retirés des archives accessibles. Lorsque le site entra en fonctionnement, le Secteur-00 était déjà totalement isolé.</p>
+
+            <span class="archive-field-label">II — La fermeture définitive</span>
+            <p>Quelques mois après l'ouverture du site, une équipe technique fut dépêchée pour inspection. Les techniciens constatèrent des anomalies : les caméras transmettaient des images d'un secteur déclaré inoccupé, et les compteurs indiquaient une consommation électrique constante. L'équipe demanda une autorisation d'accès supplémentaire qui fut immédiatement refusée. Quelques heures plus tard, le Conseil O5 ordonna la fermeture définitive, la condamnation des accès, la désactivation des liaisons et la modification des plans officiels.</p>
+
+            <span class="archive-field-label">III — Transmissions et Rumeurs</span>
+            <p>Au fil des années, des bruits métalliques, des fluctuations électriques inexpliquées, des signaux d'anciennes caméras et des alertes sur des portes effacées des plans ont été relevés. Une transmission intermittente a été captée :</p>
+            <div class="archive-quote">
+              <p>« Contrôle... vous me recevez ? Nous sommes toujours ici. Pourquoi avez-vous fermé les portes ? ...Ne nous laissez pas ici. »</p>
+              <cite>- Source : Terminal inconnu, Secteur-00 (Date indéterminée)</cite>
+            </div>
+
+            <span class="archive-field-label">IV — Directive du Conseil O5</span>
+            <div class="archive-quote">
+              <p>« Le Secteur-00 ne doit en aucun cas être rouvert sans autorisation unanime du Conseil O5. Aucune équipe scientifique, militaire ou administrative ne doit y être envoyée. Toute tentative d'accès non autorisée sera considérée comme une violation majeure des protocoles. Le personnel doit ignorer toute communication provenant de ce secteur. Nous ne pouvons pas nous permettre de répéter les erreurs du passé. »</p>
+              <cite>- Signé : Conseil O5 (Document O5 — Niveau 5)</cite>
+            </div>
+
+            <span class="archive-field-label">V — Opération Silence Absolu & Lien avec Bravo-6</span>
+            <p>Des années plus tard, une transmission contenant des données directes sur la sécurité actuelle de LAZARE déclencha l'<strong>Opération Silence Absolu</strong>. Une équipe de la RRT fut envoyée inspecter les abords extérieurs du Secteur-00. Le <strong>Commandant GHOST</strong> fut informé de l'existence du dossier mais ne reçut qu'une partie des pièces. La mission fut interrompue avant même d'atteindre la porte principale pour des motifs toujours classifiés.</p>
+            <p>Consigne secrète remise à GHOST : <em>« Si le Secteur-00 est compromis, Bravo-6 devra être mobilisée sous autorité directe du commandement. »</em></p>
+
+            <span class="archive-field-label">VI — Trame opérationnelle RP</span>
+            <p>› <strong>ÉVÉNEMENT 01 (Le Signal) :</strong> Détection d'une transmission inconnue sur les canaux internes.<br>
+            › <strong>ÉVÉNEMENT 02 (Les Archives) :</strong> Découverte de fragments administratifs sur le Secteur-00.<br>
+            › <strong>ÉVÉNEMENT 03 (Silence Absolu) :</strong> Mobilisation de la RRT et mise en alerte de Bravo-6 par GHOST.<br>
+            › <strong>ÉVÉNEMENT 04 (La Porte) :</strong> Autorisation exceptionnelle O5 pour une incursion contrôlée.</p>
+
+            <div class="archive-quote">
+              <p>« Nous avons construit LAZARE pour enfermer ce qui ne devait jamais être découvert. Mais qui nous protégera de ce que nous avons enfermé ici ? »</p>
+              <cite>- Message final gravé, Secteur-00</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p class="footer-accent">☠ SITE LAZARE ☠</p>
+    <p>Archives historiques classifiées · Accès Niveau 5</p>
+    <p class="footer-legal">
+      <a onclick="showPage('legal')">Mentions légales</a> ·
+      <a onclick="showPage('legal')">Confidentialité</a>
+    </p>
+  </footer>
+</div>
+
+<div class="search-overlay" id="search-overlay" onclick="if(event.target===this)closeSearch()">
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Rechercher dans le dossier…" oninput="runSearch(this.value)" autocomplete="off">
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="theme.js"></script>
+<script src="journal.js"></script>
+<script src="ux.js"></script>
+</body>
+</html>
