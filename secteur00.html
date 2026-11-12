@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE LAZARE // SECTEUR-00 SCELLÉ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <h1>INSTALLATION ZÉRO // ARCHIVES SCELLÉES</h1>
+            <p>Classification Niveau 5 • Secret Absolu BLACKOUT</p>
+        </div>
+        <div class="badge-alert">ACCÈS VERROUILLÉ</div>
+    </header>
+
+    <nav>
+        <a href="index.html" class="nav-link">[01] Terminal</a>
+        <a href="lore-public.html" class="nav-link">[02] Lore Public</a>
+        <a href="scps.html" class="nav-link">[03] Registre SCP</a>
+        <a href="secteur00.html" class="nav-link active restricted">[04] Secteur-00</a>
+        <a href="protocoles.html" class="nav-link">[05] Protocoles & Alertes</a>
+        <a href="effectifs.html" class="nav-link">[06] Effectifs</a>
+        <a href="menaces.html" class="nav-link">[07] Menaces</a>
+        <a href="communaute.html" class="nav-link ooc">[HORS-RP] Discord</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- TERMINAL DE DÉVERROUILLAGE (CODE : Lazar) -->
+        <div id="secteur00-gate" class="card" style="border-color: var(--alert-red); text-align: center; padding: 40px 20px;">
+            <h2 style="color:var(--alert-red); border:none;">PASSERELLE SÉCURISÉE DU SECTEUR-00</h2>
+            <p style="color:var(--text-secondary); margin-bottom: 20px;">Cette archive requiert une accréditation de déchiffrement immédiate.</p>
+            
+            <div class="scip-input-row" style="max-width: 450px; margin: 0 auto; border-left-color: var(--alert-red);">
+                <span class="scip-prompt" style="color:var(--alert-red);">CLÉ &gt;</span>
+                <input type="password" id="s00-password" placeholder="Entrez le code d'accès..." autocomplete="off" spellcheck="false" />
+            </div>
+            <div id="s00-error" class="scip-error" style="margin-top: 15px;"></div>
+        </div>
+
+        <!-- CONTENU DU LORE (Masqué tant que le code n'est pas validé) -->
+        <div id="secteur00-content" style="display: none;">
+            
+            <!-- DOSSIER INCIDENT LAZARE-01 -->
+            <div class="card">
+                <h2>DOSSIER HISTORIQUE - INCIDENT LAZARE-01</h2>
+                <p style="margin-bottom: 6px;"><strong>Classification :</strong> Niveau 5. Incident Majeur. Archives Scellées.</p>
+                <p style="margin-bottom: 6px;"><strong>Désignation :</strong> LAZARE-01</p>
+                <p style="margin-bottom: 6px;"><strong>Lieu :</strong> SITE LAZARE - Secteurs inférieurs</p>
+                <p style="margin-bottom: 6px;"><strong>Nature :</strong> Incident de confinement majeur</p>
+                <p style="margin-bottom: 20px;"><strong>Statut :</strong> Terminé - Enquête toujours ouverte // <strong>Responsable :</strong> Conseil O5</p>
+
+                <h3>I - AVANT LE DÉSASTRE</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 15px;">
+                    Quelques années après l'ouverture officielle de SITE LAZARE, le complexe connaissait une période de stabilité opérationnelle trompeuse. Les activités de recherche avancée se déroulaient conformément aux protocoles standard de la Fondation. Cependant, les secteurs inférieurs — construits à une profondeur anormale et sous un régime de sécurité renforcé — faisaient l'objet d'une surveillance particulière. Une anomalie localisée sous le niveau -12 présentait des fluctuations quantiques légères mais régulières, enregistrées par les capteurs d'ancrage de réalité. Les chercheurs estimaient alors la situation maîtrisée, attribuant les dérives aux bruits de fond résiduels des structures sous-terraines.
+                </p>
+
+                <h3>II - LE JOUR DE L'INCIDENT</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 15px;">
+                    Le 17 septembre 2011, à 02 h 43, les systèmes de surveillance automatique des secteurs inférieurs déclenchèrent une alerte générale de classe B. En moins de quatre minutes, l'alerte passa au niveau d'urgence critique Oméga. Le centre de commandement central perdit simultanément le contrôle des sas d'isolation, des caméras de sécurité et des générateurs d'ancrage de Hume du niveau -10 au niveau -15. Les données télémétriques montrèrent une chute brutale de la densité de réalité locale, accompagnée d'une montée en flèche des radiations Hume néfastes.
+                </p>
+
+                <h3>III - LA PERTE DE CONTRÔLE</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 15px;">
+                    Les premières équipes de réponse tactique (RRT) envoyées sur place perdirent tout contact radio 45 secondes après le franchissement du sas du niveau -11. Les quelques images transmises avant la coupure totale montraient une altération physique de l'architecture : les couloirs en béton armé semblaient s'étirer à l'infini et se courber selon des angles géométriquement impossibles. Face à l'incapacité de mobiliser les forces de sécurité conventionnelles et à la propagation rapide de la distorsion spatio-temporelle vers les secteurs supérieurs, le site fut placé en confinement biologique et dimensionnel hermétique.
+                </p>
+
+                <h3>IV - L'INTERVENTION DU HAUT COMMANDEMENT</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 15px;">
+                    Face à l'imminence d'un scénario de restructuration de la réalité de classe CK au niveau régional, le Conseil O5 prit directement le contrôle des opérations à distance. Autorisation fut donnée de déployer des mesures d'urgence de classe Absolue. L'ordre fut transmis d'isoler physiquement et conceptuellement la section touchée, sans tenter la moindre opération de sauvetage des personnels encore pris au piège dans la zone d'ombre.
+                </p>
+
+                <h3>V - LA FERMETURE DU SECTEUR-00</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 15px;">
+                    C'est durant les heures compliquées qui suivirent que le Secteur-00 fut formellement mentionné dans les communications codées de crise. L'ordre de scellement fut exécuté sans préavis : injection de béton lourd pressurisé enrichi au plomb et au béryllium-bronze, déclenchement de charges de démolition structurelles pour effondrer les puits d'accès, et verrouillage informatique irréversible par clés quantiques à usage unique détenues exclusivement par le Conseil O5. Le Secteur-00 fut officiellement effacé des cartes structurales du site.
+                </p>
+
+                <h3>VI - APRÈS L'INCIDENT</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 15px;">
+                    L'Incident LAZARE-01 entraîna la mort ou la disparition irrésolue de 42 membres du personnel, dont 14 chercheurs seniors et 28 agents de sécurité. Les procédures de confinement de l'ensemble du Site Lazare furent intégralement révisées. Un réajustement permanent des Ancres de Hume fut rendu obligatoire toutes les six heures. La politique du site pivota d'une approche d'étude scientifique vers une doctrine de neutralisation passive et d'isolement strict.
+                </p>
+
+                <h3>VII - LES TROIS ARCHIVES INTERDITES</h3>
+                <table class="scp-table" style="margin-bottom: 25px;">
+                    <thead>
+                        <tr>
+                            <th>Identifiant</th>
+                            <th>Nature du Support</th>
+                            <th>Résumé du Contenu scellé</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Archive 01</strong></td>
+                            <td>Enregistrement Audio</td>
+                            <td>Transmission d'urgence de 12 secondes captée au niveau -14. On entend des déformations de voix distordues hurlant une suite de coordonnées spatio-temporelles, suivies d'un bruit de mastication minérale et d'un silence absolu.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Archive 02</strong></td>
+                            <td>Rapport Scientifique</td>
+                            <td>Analyse de la baisse de réalité lors de l'incident. Documente la matérialisation d'éléments organiques non identifiés intégrés directement dans les murs de soutien du secteur.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Archive 03</strong></td>
+                            <td>Rapport Secteur-00</td>
+                            <td>Journal d'intervention final scellé par le Conseil O5 détaillant la présence d'une entité consciente agissant à travers la faille et tentant d'utiliser les systèmes d'exploitation du site.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>VIII - CONSÉQUENCES SUR SITE LAZARE</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 20px;">
+                    Cet événement a profondément altéré l'organigramme et l'état d'esprit au sein du site. La division de Réponse Rapide Tactique (RRT) n'est pas propre au site mais constitue une force intersites de la Fondation. L'escouade spécialisée Bravo-6 a été temporairement ou spécifiquement affectée au Site Lazare pour son expertise, notamment face aux environnements à faible niveau de Hume et à la guerre en géométrie non-euclidienne. L'accès aux niveaux inférieurs est désormais soumis à des contrôles psychologiques et physiologiques bimensuels.
+                </p>
+
+                <div style="background: rgba(0,0,0,0.5); padding: 15px; border-left: 2px solid var(--alert-red); text-align: center;">
+                    <p style="color:var(--alert-red); font-size:1rem;">« LAZARE-01 n'était pas le début de l'incident. C'était le moment où nous avons cessé de pouvoir le contrôler. »</p>
+                </div>
+            </div>
+
+            <!-- SECTEUR-00 & HISTOIRE CACHÉE -->
+            <div class="card" style="border-color: var(--alert-red);">
+                <h2 style="color:var(--alert-red);">SECTEUR-00 : LE SECTEUR OUBLIÉ SOUS LES FONDATIONS</h2>
+                
+                <h3>I - LES ORIGINES DU SECTEUR-00</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 15px;">
+                    Le Secteur-00 trouve son origine dans une anomalie administrative survenue lors de la validation des plans originaux de construction du Site Lazare à la fin des années 1990. Conçu initialement comme une zone de stockage cryogénique de secours et de confinement lourd sous-terrain, le secteur a progressivement disparu des registres officiels de la Fondation. En réalité, sa construction visait à englober directement la zone zéro d'une instabilité dimensionnelle majeure découverte lors des premiers forages.
+                </p>
+
+                <h3>II - LA FERMETURE</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 15px;">
+                    Lors de la mise sous scellés consécutive à l'Incident LAZARE-01, l'équipe technique chargée du blindage final découvrit avec effroi que le réseau interne de télécommunication du Secteur-00 continuait de transmettre. Les moniteurs affichaient les flux vidéo de caméras pourtant physiques détruites ou isolées sans alimentation. Voyant que les flux montraient des espaces du secteur modifiés et occupés par des formes indéterminées, le Conseil O5 ordonna l'arrêt immédiat des tentatives d'analyse et la fermeture définitive et étanche des sas.
+                </p>
+
+                <h3>III - LES RUMEURS</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 10px;">
+                    Malgré le mur de béton de douze mètres d'épaisseur et les barrières électromagnétiques, le personnel affecté au secteur adjacent (Niveau -09) rapporte régulièrement des anomalies acoustiques : bruits de pas cadencés, grattements métalliques contre le blindage et signaux radio parasites à très basse fréquence interceptés par les instruments de mesure.
+                </p>
+                <div style="background: rgba(0,0,0,0.4); padding: 12px; border-left: 2px solid var(--alert-amber); margin-bottom: 15px;">
+                    <em>Ces transmissions diffusent en boucle une phrase identique, parlée dans une langue altérée :</em><br>
+                    <strong style="color:var(--alert-amber);">« Nous sommes toujours ici. Pourquoi avez-vous fermé les portes ? »</strong>
+                </div>
+
+                <h3>IV - LE DOSSIER DU CONSEIL O5</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 15px;">
+                    Le dossier relatif au Secteur-00 est placé sous le protocole de secret absolu <strong>"BLACKOUT"</strong>. Toute tentative d'accéder physiquement au secteur, de percer les structures de confinement ou d'analyser les signaux émis depuis l'intérieur sans autorisation expresse d'au moins trois membres du Conseil O5 est punie d'exécution sommaire ou d'affectation de classe D à durée indéterminée.
+                </p>
+
+                <h3>V - OPÉRATION SILENCE ABSOLU</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 15px;">
+                    En mai 2018, une transmission inhabituelle en provenance du Secteur-00 utilisa les identifiants cryptographiques d'un chercheur disparu lors de l'incident de 2011. Une unité de la RRT fut prépositionnée devant la porte blindée principale suite à la détection d'une baisse de pression mécanique de l'autre côté du sas. L'intervention fut interrompue in extremis par un ordre direct d'annulation émanant du haut commandement, réaffirmant le dogme : le Secteur-00 ne doit sous aucun prétexte être réouvert.
+                </p>
+
+                <h3>VI - LE LIEN AVEC BRAVO-6</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 20px;">
+                    Le commandement de l'escouade Bravo-6 a reçu une copie partielle et caviardée du dossier du Secteur-00. Ses ordres permanents stipulent que si une brèche matérielle venait à se produire depuis l'intérieur du Secteur-00 vers le reste du Site Lazare, Bravo-6 a la responsabilité d'initier sans délai la mise à feu des charges thermitiques d'effondrement total du secteur inférieur, au détriment de la structure globale du site.
+                </p>
+
+                <div style="background: rgba(0,0,0,0.5); padding: 15px; border-left: 2px solid var(--alert-red); text-align: center;">
+                    <p style="color:var(--ice-pale); font-style: italic;">« Nous avons construit LAZARE pour enfermer ce qui ne devait jamais être découvert. Mais qui nous protégera de ce que nous avons enfermé ici ? »</p>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 5px;">— MESSAGE FINAL DU SECTEUR-00</p>
+                </div>
+            </div>
+
+            <!-- HISTOIRE CACHÉE : LE COUVERCLE -->
+            <div class="card">
+                <h2>L'HISTOIRE CACHÉE : LA CRÉATION DU SITE LAZARE</h2>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 12px;">
+                    Le Site Lazare n'a pas été conçu à l'origine pour abriter une collection variée d'objets ou d'entités anomales. Sa construction répondait à un objectif unique et dissimulé : <strong>servir de couvercle</strong>.
+                </p>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 12px;">
+                    <strong>1997 : La Découverte et le Projet Égide —</strong> Après la détection de la Faille dimensionnelle en novembre 1997, le Conseil O5 a rapidement compris l'impossibilité de déplacer l'anomalie. Sous le nom de code "Projet Égide", décision fut prise d'ériger une installation massive directement par-dessus la faille pour isoler le phénomène du public et de tout groupe d'intérêt rival.
+                </p>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 12px;">
+                    <strong>1998 - 2001 : La Construction du Secteur-00 —</strong> Les travaux de creusement du Secteur-00 furent marqués par de fréquents incidents de chantier. Les ouvriers et les ingénieurs subirent des distorsions temporelles sévères — certains vieillissant de plusieurs années en l'espace de quelques heures, d'autres ressortant des zones profondes sans aucun souvenir des jours précédents. Pour maintenir le secret, les équipes de construction furent renouvelées régulièrement et soumises à des amnésiques de Classe A à la fin du chantier.
+                </p>
+                <p style="line-height: 1.6; color: var(--text-secondary);">
+                    <strong>Le "Péché Originel" de Lazare —</strong> L'Incident LAZARE-01 de 2011 n'était pas une simple rupture d'isolation fortuite, mais une quarantaine forcée. Lorsque les entités situées de l'autre côté de SCP-LAZARE-01 ont tenté d'utiliser la Faille comme point d'ancrage pour traverser vers notre réalité, le Conseil O5 a scellé hermétiquement le Secteur-00, sacrifiant sciemment tout le personnel présent au fond. Le Site Lazare actuel fonctionne aujourd'hui comme un gigantesque sarcophage opérationnel.
+                </p>
+            </div>
+
+            <!-- DOSSIER SCP-LAZARE-01 -->
+            <div class="card">
+                <h2>SCP-LAZARE-01 // LA FAILLE DIMENSIONNELLE</h2>
+                <p style="margin-bottom: 8px;"><strong>Désignation :</strong> SCP-LAZARE-01 | <strong>Type :</strong> Anomalie dimensionnelle | <strong>Niveau de Menace :</strong> Extrême (Rouge)</p>
+                
+                <h3 style="margin-top: 15px;">I. La découverte de la Faille (Novembre 1997)</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 15px;">
+                    SCP-LAZARE-01 a été identifié en novembre 1997 lors d'une campagne de forage géologique profond dans la région. L'anomalie se présente sous la forme d'une rupture spatiale verticale immobile d'environ 4,2 mètres de hauteur et 1,1 mètre de largeur maximale. La faille ne semble pas affectée par la gravité terrestre et demeure suspendue à environ 80 centimètres du sol au cœur de ce qui est devenu aujourd'hui le Secteur-00.
+                </p>
+
+                <h3>II. Ce qui se trouve de l'autre côté</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 10px;">
+                    Les sondes autonomes équipées de caméras envoyées à travers SCP-LAZARE-01 avant sa fermeture ont révélé un environnement extra-dimensionnel stérile, caractérisé par des paysages rocheux inconnus sous un ciel sans astre visible. Les capteurs ont enregistré des structures artificielles délabrées à l'horizon ainsi que des silhouettes de grande taille statiques. Lors de la dernière expédition robotisée, les systèmes télémétriques ont reçu un signal textuel clair : <strong style="color:var(--alert-red);">"Nous savons que vous êtes là."</strong>
+                </p>
+
+                <h3>III. Les propriétés anormales</h3>
+                <ul style="list-style-position: inside; color: var(--text-secondary); line-height: 1.8; margin-bottom: 15px;">
+                    <li><strong>Perturbation temporelle :</strong> Le temps mesuré à proximité immédiate de la faille s'écoule selon un ratio variable variant de 1:3 à 1:400 par rapport au temps terrestre standard.</li>
+                    <li><strong>Distorsion spatiale :</strong> L'espace environnant subit des décalages métriques sporadiques. Les volumes des pièces adjacentes augmentent ou diminuent sans altération visible de la structure externe.</li>
+                    <li><strong>Manifestations :</strong> L'anomalie produit des projections acoustiques et visuelles rétrospectives ou prospectives des personnels travaillant sur le site.</li>
+                </ul>
+
+                <h3>IV. Incident LAZARE-01 — 17 septembre 2011</h3>
+                <p style="line-height: 1.6; color: var(--text-secondary);">
+                    Le 17 septembre 2011, SCP-LAZARE-01 est entré dans une phase d'instabilité critique sans déclencheur apparent. Pendant exactement 47 secondes, la faille a modifié son apparence physique, passant d'une déchirure sombre à un orifice lumineux parfaitement circulaire. Durant cet intervalle, les capteurs visuels ont enregistré une silhouette humanoïde aux proportions déformées se tenant du côté de la Faille mais tournée vers l'intérieur du Site Lazare, juste avant l'interruption des systèmes de confinement.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>SCiPNET // SITE LAZARE // ARCHIVES CLASSÉES NIVEAU 5</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
