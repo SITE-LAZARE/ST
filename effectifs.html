@@ -3,83 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SITE LAZARE // Effectifs & RRT</title>
+    <title>SITE LAZARE // Effectifs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="brand">
-            <h1>UNITÉS SPÉCIALES & EFFECTIFS // SITE LAZARE</h1>
-            <p>Déploiement Tactique & Structure Opérationnelle</p>
+            <h1>ORGANIGRAMME DU PERSONNEL // SITE LAZARE</h1>
+            <p>Registre Officiel des Postes RP & Unités Mobiles</p>
         </div>
-        <div class="badge-alert">ACCÈS COMMANDEMENT</div>
+        <div class="badge-alert">CLEARANCE N4+</div>
     </header>
 
     <nav>
         <a href="index.html" class="nav-link">[01] Terminal</a>
-        <a href="lore.html" class="nav-link">[02] Secteur-00</a>
-        <a href="scps.html" class="nav-link">[03] SCP-LAZARE-01</a>
-        <a href="incidents.html" class="nav-link">[04] Incident LAZARE-01</a>
-        <a href="effectifs.html" class="nav-link active">[05] Effectifs & RRT</a>
-        <a href="communaute.html" class="nav-link ooc">[HORS-RP] Hub Discord</a>
+        <a href="lore-public.html" class="nav-link">[02] Lore Public</a>
+        <a href="scps.html" class="nav-link">[03] Registre SCP</a>
+        <a href="secteur00.html" class="nav-link restricted">[04] Secteur-00</a>
+        <a href="protocoles.html" class="nav-link">[05] Protocoles & Alertes</a>
+        <a href="effectifs.html" class="nav-link active">[06] Effectifs</a>
+        <a href="menaces.html" class="nav-link">[07] Menaces</a>
+        <a href="communaute.html" class="nav-link ooc">[HORS-RP] Discord</a>
     </nav>
 
     <div class="container">
+        
+        <!-- SECTION CONSEIL O5 (CLIC = OUVERTURE TERMINAL O5) -->
+        <div class="card" style="border-color: var(--alert-red); cursor: pointer;" onclick="openO5Terminal()">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <span class="badge keter">Niveau 5 - Absolu</span>
+                    <h2 style="color:var(--alert-red); margin:5px 0 0; border:none;">CONSEIL O5 // HAUT COMMANDEMENT</h2>
+                    <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:5px;">Cliquez pour ouvrir la console sécurisée du Conseil O5.</p>
+                </div>
+                <div style="color:var(--alert-red); font-size:1.5rem; font-weight:bold;">[VERROUILLÉ]</div>
+            </div>
+        </div>
+
+        <!-- DIRECTION & CADRES RP -->
         <div class="card">
-            <h2>UNITÉS TACTIQUES MOBILISÉES</h2>
-            
-            <h3 style="margin-top: 15px;">RRT (Rapid Response Team)</h3>
-            <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 15px;">
-                Force d'intervention rapide de première ligne. La RRT est mobilisée pour reprendre les secteurs isolés, contenir les brèches imprévues et sécuriser les périmètres sensibles du complexe lors d'un déclenchement de Code Rouge.
-            </p>
-
-            <h3>Détachement Spécial Bravo-6</h3>
-            <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 20px;">
-                Unité hautement entraînée placée sous protocole confidentiel. Selon les directives personnelles conservées par le <strong>Commandant GHOST</strong>, Bravo-6 a pour ordre direct d'être mobilisée en priorité absolue si l'intégrité du Secteur-00 venait à être compromise.
-            </p>
-
-            <h3>REGISTRE DES POSTES DE COMMANDEMENT</h3>
+            <h2>COMMANDEMENT DE L'INSTALLATION</h2>
             <table class="scp-table">
                 <thead>
                     <tr>
-                        <th>Identifiant / Nom RP</th>
-                        <th>Poste / Rôle</th>
-                        <th>Unité / Département</th>
-                        <th>Niveau d'Accréditation</th>
+                        <th>Désignation / Nom RP</th>
+                        <th>Rôle</th>
+                        <th>Département</th>
+                        <th>Accréditation</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>Conseil O5</strong></td>
-                        <td>Supervision Globale</td>
-                        <td>Haut Commandement</td>
-                        <td><span style="color:var(--alert-red)">Niveau 5 (Absolu)</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Directeur de Site</strong></td>
-                        <td>Administration du Complexe</td>
-                        <td>Direction Générale</td>
-                        <td>Niveau 5</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Commandant GHOST</strong></td>
-                        <td>Commandement Opérationnel</td>
-                        <td>Forces Tactiques & RRT / Bravo-6</td>
-                        <td>Niveau 4 (Accès Partiel Secteur-00)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Opérateurs RRT</strong></td>
-                        <td>Intervention Rapide</td>
-                        <td>Sécurité du Complexe</td>
-                        <td>Niveau 3</td>
-                    </tr>
+                    <tr><td><strong>Directeur d'Installation</strong></td><td>Gestion Globale du Complexe</td><td>Administration du Site</td><td>Niveau 5</td></tr>
+                    <tr><td><strong>Directeur Adjoint</strong></td><td>Coordination Logistique</td><td>Administration du Site</td><td>Niveau 4</td></tr>
+                    <tr><td><strong>Commandant de Garnison</strong></td><td>Défense & Sécurité Intérieure</td><td>Département de la Sécurité</td><td>Niveau 4</td></tr>
+                    <tr><td><strong>Responsable des Ancres</strong></td><td>Supervision des Ancres de Hume</td><td>Gardiens de Réalité</td><td>Niveau 4</td></tr>
                 </tbody>
             </table>
         </div>
+
+        <!-- FORCES TACTIQUES MOBILES -->
+        <div class="card">
+            <h2>FORCES D'INTERVENTION AFFECTÉES</h2>
+            
+            <h3 style="margin-top: 15px;">RRT (Rapid Response Team)</h3>
+            <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 20px;">
+                La division de Réponse Rapide Tactique (RRT) n'est pas propre au site mais constitue une force intersites de la Fondation. Elle intervient lors des ruptures de confinement majeures et des incursions ennemies sur le Site Lazare.
+            </p>
+
+            <h3>Escouade Spécialisée Bravo-6</h3>
+            <p style="line-height: 1.6; color: var(--text-secondary);">
+                L'escouade spécialisée Bravo-6 a été spécifiquement affectée au Site Lazare pour son expertise unique face aux environnements à faible niveau de Hume et à la guerre en géométrie non-euclidienne. Elle détient l'ordre permanent de faire détoner les charges d'effondrement si une brèche matérielle survient depuis le Secteur-00.
+            </p>
+        </div>
+
     </div>
 
     <footer>
-        <p>SCiPNET // SITE LAZARE // ARCHIVES SCELLÉES PAR LE CONSEIL O5</p>
+        <p>SCiPNET // SITE LAZARE // COMMANDEMENT DU SITE</p>
     </footer>
     <script src="script.js"></script>
 </body>
