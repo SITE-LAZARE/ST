@@ -242,7 +242,7 @@ footer {
 }
 
 /* ====================================================
-   TERMINAL WINDOWS (CMD) D'AUTHENTIFICATION
+   TERMINAL MAINFRAME SCiPNET (ESTHÉTIQUE FONDATION)
    ==================================================== */
 #terminal-overlay {
     position: fixed;
@@ -250,76 +250,106 @@ footer {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(3, 6, 12, 0.98);
-    backdrop-filter: blur(8px);
+    background-color: rgba(3, 7, 14, 0.98);
+    backdrop-filter: blur(10px);
     z-index: 10000;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.cmd-window {
+.scip-terminal {
     width: 90%;
-    max-width: 750px;
-    background: #0c0c0c;
-    border: 1px solid #333333;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
-    font-family: "Consolas", "Courier New", monospace;
-    border-radius: 4px 4px 0 0;
+    max-width: 780px;
+    background: #040810;
+    border: 1px solid #1e3a5f;
+    box-shadow: 0 0 40px rgba(30, 58, 95, 0.4), inset 0 0 15px rgba(0, 0, 0, 0.8);
+    font-family: "Consolas", monospace;
+    border-radius: 4px;
     overflow: hidden;
 }
 
-/* Barre de titre Windows */
-.cmd-titlebar {
-    background: #1f1f1f;
-    color: #cccccc;
-    font-size: 0.8rem;
-    padding: 6px 12px;
+/* Barre supérieure SCiPNET */
+.scip-header {
+    background: #0a1424;
+    border-bottom: 1px solid #1e3a5f;
+    padding: 10px 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #333;
-    user-select: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
 }
 
-.cmd-icon {
-    font-weight: bold;
-    color: #ffffff;
-    margin-right: 5px;
-}
-
-.cmd-controls span {
-    margin-left: 14px;
-    cursor: default;
-    color: #888;
-}
-
-.cmd-controls .cmd-close:hover {
-    color: #ff4757;
-}
-
-/* Corps du terminal */
-.cmd-body {
-    padding: 20px;
-    color: #cccccc;
-    font-size: 0.95rem;
-    min-height: 280px;
-    line-height: 1.5;
-}
-
-.cmd-line {
+.scip-status {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 10px;
+    gap: 10px;
+    color: #a8cded;
+    font-weight: bold;
 }
 
-.cmd-prompt {
-    color: #ffffff;
+.scip-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #4ade80;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #4ade80;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+.scip-tag {
+    background: rgba(96, 165, 250, 0.1);
+    border: 1px solid #3b82f6;
+    color: #60a5fa;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    border-radius: 2px;
+}
+
+/* Écran du terminal */
+.scip-screen {
+    padding: 25px;
+    color: #c7d8ee;
+    font-size: 0.95rem;
+    min-height: 280px;
+    line-height: 1.6;
+}
+
+.scip-dim {
+    color: #557296;
+    font-size: 0.85rem;
+}
+
+.scip-warning {
+    color: var(--alert-amber);
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* Ligne de commande */
+.scip-input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    background: rgba(10, 20, 36, 0.6);
+    padding: 10px 14px;
+    border-left: 2px solid #3b82f6;
+}
+
+.scip-prompt {
+    color: #60a5fa;
+    font-weight: bold;
     white-space: nowrap;
 }
 
-#cmd-input {
+#terminal-input {
     background: transparent;
     border: none;
     outline: none;
@@ -327,12 +357,14 @@ footer {
     font-family: inherit;
     font-size: 1rem;
     flex: 1;
-    caret-color: #ffffff;
+    caret-color: #4ade80;
 }
 
-.cmd-error {
+/* Messages d'erreur */
+.scip-error {
     margin-top: 15px;
     color: var(--alert-red);
-    font-weight: bold;
     font-size: 0.85rem;
+    font-weight: bold;
+    min-height: 20px;
 }
