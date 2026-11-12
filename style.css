@@ -240,3 +240,99 @@ footer {
     color: var(--text-secondary);
     margin-top: 40px;
 }
+
+/* ====================================================
+   TERMINAL WINDOWS (CMD) D'AUTHENTIFICATION
+   ==================================================== */
+#terminal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(3, 6, 12, 0.98);
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cmd-window {
+    width: 90%;
+    max-width: 750px;
+    background: #0c0c0c;
+    border: 1px solid #333333;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+    font-family: "Consolas", "Courier New", monospace;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+}
+
+/* Barre de titre Windows */
+.cmd-titlebar {
+    background: #1f1f1f;
+    color: #cccccc;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    user-select: none;
+}
+
+.cmd-icon {
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.cmd-controls span {
+    margin-left: 14px;
+    cursor: default;
+    color: #888;
+}
+
+.cmd-controls .cmd-close:hover {
+    color: #ff4757;
+}
+
+/* Corps du terminal */
+.cmd-body {
+    padding: 20px;
+    color: #cccccc;
+    font-size: 0.95rem;
+    min-height: 280px;
+    line-height: 1.5;
+}
+
+.cmd-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.cmd-prompt {
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+#cmd-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #4ade80;
+    font-family: inherit;
+    font-size: 1rem;
+    flex: 1;
+    caret-color: #ffffff;
+}
+
+.cmd-error {
+    margin-top: 15px;
+    color: var(--alert-red);
+    font-weight: bold;
+    font-size: 0.85rem;
+}
