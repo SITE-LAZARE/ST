@@ -1,114 +1,319 @@
 :root {
-    --bg-abyss: #050811;
-    --bg-surface: #0a1120;
-    --bg-panel: #0d172b;
-    --bg-card: #12203b;
-    --border-ice: #1d3356;
-    --border-bright: #3b82f6;
-    --text-primary: #d5e4fc;
-    --text-secondary: #7491b6;
-    --ice-pale: #a6cbf2;
-    --ice-glow: #60a5fa;
+    --bg-page: #060c17;
+    --bg-header: #0b1526;
+    --bg-sidebar: #091221;
+    --bg-card: #0e1a30;
+    --border-wiki: #1c3559;
+    --border-highlight: #3b82f6;
+    --text-main: #d3e3f7;
+    --text-muted: #7995ba;
+    --accent-ice: #a4ccf5;
+    --accent-glow: #60a5fa;
     --alert-red: #ff4757;
-    --alert-amber: #f59e0b;
-    --blackout: #020408;
+    --alert-amber: #eccc68;
+    --classified-bg: #03070d;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: "Consolas", monospace, sans-serif; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    background-color: var(--bg-abyss);
-    color: var(--text-primary);
-    background-image: 
-        radial-gradient(ellipse at 50% 0%, #102138 0%, transparent 70%),
-        linear-gradient(rgba(5, 8, 17, 0.96), rgba(5, 8, 17, 0.96));
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: "Trebuchet MS", "Verdana", Arial, sans-serif;
+    line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-body::before {
-    content: ""; display: block; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
-    background-size: 100% 4px; z-index: 999; pointer-events: none; opacity: 0.5;
+/* En-tête officiel du Wiki SCP */
+#header {
+    background: linear-gradient(to bottom, #091322, #060b14);
+    border-bottom: 2px solid var(--border-wiki);
+    padding: 25px 40px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.8);
 }
 
-header {
-    background: var(--bg-surface); border-bottom: 2px solid var(--border-ice);
-    padding: 15px 30px; display: flex; justify-content: space-between; align-items: center;
-}
-.brand h1 { font-size: 1.3rem; letter-spacing: 2px; color: var(--ice-pale); }
-.brand p { font-size: 0.8rem; color: var(--text-secondary); }
-.badge-alert {
-    background: rgba(255, 71, 87, 0.15); border: 1px solid var(--alert-red);
-    color: var(--alert-red); padding: 6px 14px; font-size: 0.75rem; font-weight: bold;
+.header-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-nav {
-    background: rgba(10, 17, 32, 0.96); backdrop-filter: blur(5px);
-    border-bottom: 1px solid var(--border-ice); display: flex; flex-wrap: wrap;
-    justify-content: center; gap: 5px; padding: 10px 15px; position: sticky; top: 0; z-index: 100;
+.scp-logo-badge {
+    width: 65px;
+    height: 65px;
+    border: 2px solid var(--accent-ice);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-ice);
+    background: rgba(96, 165, 250, 0.08);
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.2);
 }
-.nav-link {
-    color: var(--text-secondary); text-decoration: none; padding: 7px 13px;
-    font-size: 0.8rem; border: 1px solid transparent; transition: all 0.2s ease;
+
+.header-titles h1 {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    color: #fff;
     text-transform: uppercase;
+    font-family: "Courier New", monospace;
 }
-.nav-link:hover { color: var(--ice-pale); border-color: var(--border-ice); background: var(--bg-panel); }
-.nav-link.active { color: #fff; border-color: var(--ice-glow); background: rgba(96, 165, 250, 0.15); }
-.nav-link.restricted { border-left: 2px solid var(--alert-red); color: var(--alert-red); }
-.nav-link.ooc { border-left: 2px solid var(--alert-amber); color: var(--alert-amber); }
 
-.container { max-width: 1200px; width: 90%; margin: 30px auto; flex: 1; }
-.banner {
-    border-left: 4px solid var(--border-bright); background: var(--bg-panel);
-    padding: 15px 20px; margin-bottom: 25px; font-size: 0.9rem;
+.header-titles p {
+    font-size: 0.85rem;
+    color: var(--accent-ice);
+    letter-spacing: 1px;
 }
-.banner.danger { border-left-color: var(--alert-red); }
 
-.card {
-    background: var(--bg-card); border: 1px solid var(--border-ice);
-    padding: 22px; margin-bottom: 20px;
+/* Disposition Wiki avec Sidebar */
+#layout {
+    max-width: 1350px;
+    width: 95%;
+    margin: 25px auto;
+    display: flex;
+    gap: 30px;
+    flex: 1;
 }
-.card h2, .card h3 { color: var(--ice-pale); border-bottom: 1px solid var(--border-ice); padding-bottom: 8px; margin-bottom: 15px; }
 
-.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-
-.badge { display: inline-block; padding: 2px 7px; font-size: 0.7rem; font-weight: bold; border-radius: 2px; margin-bottom: 8px; text-transform: uppercase; }
-.safe { background: #064e3b; color: #6ee7b7; }
-.euclid { background: #78350f; color: #fde047; }
-.keter { background: #7f1d1d; color: #fca5a5; }
-
-.redacted { background: var(--blackout); color: var(--blackout); padding: 0 4px; cursor: pointer; transition: 0.2s; }
-.redacted.revealed { background: rgba(255, 71, 87, 0.2); color: var(--alert-red); }
-
-.scp-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.85rem; }
-.scp-table th, .scp-table td { border: 1px solid var(--border-ice); padding: 10px 12px; text-align: left; }
-.scp-table th { background: var(--bg-surface); color: var(--ice-pale); }
-.scp-table tr:nth-child(even) { background: rgba(10, 17, 32, 0.5); }
-
-.btn-action { display: inline-block; background: #5865F2; color: #fff; text-decoration: none; padding: 10px 20px; font-weight: bold; font-size: 0.85rem; cursor: pointer; border: none; }
-
-/* TERMINAUX MODAUX */
-#terminal-overlay, #o5-overlay {
-    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    background: rgba(3, 7, 14, 0.98); backdrop-filter: blur(10px);
-    z-index: 10000; display: flex; align-items: center; justify-content: center;
+/* Sidebar Wiki classique */
+#sidebar {
+    width: 260px;
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border-wiki);
+    padding: 15px;
+    height: fit-content;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
-.scip-terminal {
-    width: 90%; max-width: 760px; background: #040810; border: 1px solid #1e3a5f;
-    box-shadow: 0 0 40px rgba(30, 58, 95, 0.4); border-radius: 4px; overflow: hidden;
-}
-.scip-header { background: #0a1424; border-bottom: 1px solid #1e3a5f; padding: 10px 18px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
-.scip-status { display: flex; align-items: center; gap: 10px; color: #a8cded; font-weight: bold; }
-.scip-dot { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; box-shadow: 0 0 8px #4ade80; }
-.scip-tag { background: rgba(96, 165, 250, 0.1); border: 1px solid #3b82f6; color: #60a5fa; padding: 2px 8px; font-size: 0.7rem; }
-.scip-screen { padding: 25px; color: #c7d8ee; font-size: 0.95rem; min-height: 250px; line-height: 1.6; }
-.scip-dim { color: #557296; font-size: 0.85rem; }
-.scip-warning { color: var(--alert-amber); font-size: 0.85rem; margin-top: 5px; }
-.scip-input-row { display: flex; align-items: center; gap: 10px; margin-top: 15px; background: rgba(10, 20, 36, 0.6); padding: 10px 14px; border-left: 2px solid #3b82f6; }
-.scip-prompt { color: #60a5fa; font-weight: bold; white-space: nowrap; }
-.scip-input-row input { background: transparent; border: none; outline: none; color: #4ade80; font-family: inherit; font-size: 1rem; flex: 1; }
-.scip-error { margin-top: 12px; color: var(--alert-red); font-size: 0.85rem; font-weight: bold; }
 
-footer { border-top: 1px solid var(--border-ice); background: var(--bg-surface); padding: 20px; text-align: center; font-size: 0.75rem; color: var(--text-secondary); margin-top: 40px; }
+.sidebar-title {
+    font-size: 0.8rem;
+    color: var(--accent-ice);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--border-wiki);
+    padding-bottom: 5px;
+    margin: 15px 0 8px 0;
+    font-weight: bold;
+}
+.sidebar-title:first-child { margin-top: 0; }
+
+.side-link {
+    display: block;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    border-radius: 2px;
+    transition: all 0.2s;
+    border-left: 2px solid transparent;
+}
+
+.side-link:hover {
+    color: #fff;
+    background: var(--bg-card);
+    border-left-color: var(--border-highlight);
+    padding-left: 14px;
+}
+
+.side-link.active {
+    color: #fff;
+    background: rgba(96, 165, 250, 0.15);
+    border-left-color: var(--accent-glow);
+    font-weight: bold;
+}
+
+.side-link.o5 { border-left-color: var(--alert-red); color: #fca5a5; }
+.side-link.ooc { border-left-color: var(--alert-amber); color: #fde047; }
+
+/* Contenu Principal */
+#content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Blocs & Modules Wiki */
+.page-title {
+    font-size: 1.8rem;
+    color: var(--accent-ice);
+    border-bottom: 2px solid var(--border-wiki);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-family: "Courier New", monospace;
+}
+
+.wiki-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-wiki);
+    padding: 22px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.wiki-card h2, .wiki-card h3 {
+    color: var(--accent-ice);
+    margin: 15px 0 10px 0;
+    border-bottom: 1px solid var(--border-wiki);
+    padding-bottom: 4px;
+}
+.wiki-card h2:first-child { margin-top: 0; }
+
+/* Blocs de citation SCP */
+blockquote, .scp-quote {
+    background: rgba(11, 21, 38, 0.7);
+    border-left: 4px solid var(--border-highlight);
+    padding: 12px 18px;
+    margin: 15px 0;
+    font-style: italic;
+    color: var(--accent-ice);
+}
+
+/* Tableaux SCP */
+.scp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 0.85rem;
+}
+
+.scp-table th, .scp-table td {
+    border: 1px solid var(--border-wiki);
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.scp-table th {
+    background: #091322;
+    color: var(--accent-ice);
+    font-weight: bold;
+}
+
+.scp-table tr:nth-child(even) {
+    background: rgba(14, 26, 48, 0.4);
+}
+
+/* Badges de Danger */
+.badge {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+.keter { background: #5c1414; color: #fca5a5; border: 1px solid var(--alert-red); }
+.safe { background: #064e3b; color: #6ee7b7; border: 1px solid #10b981; }
+.euclid { background: #5c4308; color: #fde047; border: 1px solid #f59e0b; }
+
+/* Censure interactive */
+.redacted {
+    background: var(--classified-bg);
+    color: var(--classified-bg);
+    padding: 0 5px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+    border-radius: 2px;
+}
+.redacted.revealed {
+    background: rgba(255, 71, 87, 0.2);
+    color: var(--alert-red);
+}
+
+/* Terminaux Modaux (Auth & O5) */
+#terminal-overlay, #o5-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(3, 7, 14, 0.98);
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terminal-box {
+    width: 90%;
+    max-width: 700px;
+    background: #040810;
+    border: 1px solid var(--border-wiki);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+    font-family: "Courier New", monospace;
+    overflow: hidden;
+}
+
+.term-header {
+    background: #0b1526;
+    border-bottom: 1px solid var(--border-wiki);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--accent-ice);
+}
+
+.term-body {
+    padding: 25px;
+    font-size: 0.9rem;
+    color: #c7d8ee;
+    line-height: 1.5;
+}
+
+.term-input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    background: rgba(10, 20, 36, 0.6);
+    padding: 10px;
+    border-left: 2px solid var(--border-highlight);
+}
+
+.term-input-row input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #4ade80;
+    font-family: inherit;
+    font-size: 1rem;
+    flex: 1;
+}
+
+.term-error {
+    color: var(--alert-red);
+    font-size: 0.85rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn-action {
+    display: inline-block;
+    background: #5865F2;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border-radius: 2px;
+}
+
+footer {
+    background: var(--bg-header);
+    border-top: 1px solid var(--border-wiki);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 40px;
+}
+
+@media (max-width: 850px) {
+    #layout { flex-direction: column; }
+    #sidebar { width: 100%; }
+}
