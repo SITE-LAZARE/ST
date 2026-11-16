@@ -3,47 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCiPNET // SITE LAZARE</title>
+    <title>Site-LZ // Archives Centrales</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="brand">
-            <h1>SITE LAZARE // SECTEUR SUB-ALPIN</h1>
-            <p>Réseau SCiPNET v4.81 • Statut : <span id="terminal-time">Synchronisation...</span></p>
+    <header id="header">
+        <div class="header-content">
+            <div class="scp-logo-badge">SCP</div>
+            <div class="header-titles">
+                <h1>SITE LAZARE (SITE-LZ)</h1>
+                <p>Complexe de Recherche & Confinement Dimensionnel — Québec, Canada</p>
+            </div>
         </div>
-        <div class="badge-alert">CLEARANCE NIVEAU 5</div>
     </header>
 
-    <nav>
-        <a href="index.html" class="nav-link active">[01] Terminal</a>
-        <a href="lore-public.html" class="nav-link">[02] Lore Public</a>
-        <a href="scps.html" class="nav-link">[03] Registre SCP</a>
-        <a href="secteur00.html" class="nav-link restricted">[04] Secteur-00</a>
-        <a href="protocoles.html" class="nav-link">[05] Protocoles & Alertes</a>
-        <a href="effectifs.html" class="nav-link">[06] Effectifs</a>
-        <a href="menaces.html" class="nav-link">[07] Menaces</a>
-        <a href="communaute.html" class="nav-link ooc">[HORS-RP] Discord</a>
-    </nav>
+    <div id="layout">
+        <!-- Sidebar Navigation Wiki -->
+        <nav id="sidebar">
+            <div class="sidebar-title">Base de Données</div>
+            <a href="index.html" class="side-link active">Hub Principal</a>
+            <a href="dossier.html" class="side-link">Tome I : Dossier & Histoire</a>
+            <a href="architecture.html" class="side-link">Tome II : Cartographie</a>
+            <a href="scp-lazare-01.html" class="side-link">Tome III : SCP-LAZARE-01</a>
+            <a href="factions-alertes.html" class="side-link">Tome IV : Factions & Alertes</a>
 
-    <div class="container">
-        <div class="banner">
-            <strong>SYSTÈME D'ANCRAGE DE RÉALITÉ :</strong> Les Ancres de Hume de Kant du Site Lazare sont opérationnelles. Réajustement systématique programmé toutes les 6 heures.
-        </div>
+            <div class="sidebar-title">Niveau 5 (Restreint)</div>
+            <a href="archives-o5.html" class="side-link o5">Tome V : Archives O5</a>
 
-        <div class="card">
-            <h2>STATUT OPÉRATIONNEL DU SITE LAZARE</h2>
-            <p style="margin-bottom: 12px;"><strong>Spécialisation :</strong> Centre principal d'analyse, confinement et stabilisation des anomalies spatiales, temporelles et dimensionnelles (Secteur Europe).</p>
-            <p style="margin-bottom: 12px;"><strong>Laboratoires :</strong> Ingénierie de réalité avancée, chambres d'isolation à faible indice de Hume.</p>
-            <p style="margin-bottom: 12px;"><strong>État de confinement général :</strong> <span style="color:#4ade80;">STABLE // DÉVANCES ARCHITECTURALES EN COURS</span></p>
-            <p style="color: var(--text-secondary); line-height: 1.6;">
-                Le Site Lazare fonctionne officiellement comme un centre de confinement et de recherche de pointe. Toutes les archives concernant les fondations profondes et le Secteur-00 sont soumises à un scellement absolu par le Conseil O5.
-            </p>
-        </div>
+            <div class="sidebar-title">Espace Hors-RP</div>
+            <a href="communaute.html" class="side-link ooc">Roblox & Discord</a>
+
+            <div class="sidebar-title">Statut Session</div>
+            <div id="agent-display" style="font-size:0.75rem; color:var(--accent-ice); padding: 5px 10px;">Non connecté</div>
+            <div style="font-size:0.7rem; color:var(--text-muted); padding: 0 10px;" id="live-clock">Synchronisation...</div>
+        </nav>
+
+        <!-- Contenu -->
+        <main id="content">
+            <h1 class="page-title">BIBLE OFFICIELLE DU SITE LAZARE (SITE-LZ)</h1>
+
+            <blockquote>
+                « Nous n'avons pas creusé dans cette montagne pour cacher un secret au monde. Nous avons coulé quatorze cents mètres de granit par-dessus pour qu'il ne puisse pas remonter. »<br>
+                <span style="font-size:0.8rem; opacity:0.8;">— Extrait non attribué, gravé à l'intérieur du sas blindé du Puits Alpha (1999)</span>
+            </blockquote>
+
+            <div class="wiki-card">
+                <h2>BULLETIN OPÉRATIONNEL PERMANENT</h2>
+                <p><strong>Statut de l'installation :</strong> OPÉRATIONNELLE (ALERTE PERMANENTE DE NIVEAU 2)</p>
+                <p><strong>Localisation de couverture :</strong> Complexe Hydro-Géologique et Minier Boréal Inc., Québec (Canada).</p>
+                <p><strong>Profondeur maximale :</strong> -1 850 mètres sous la crête (Secteur-00 condamné).</p>
+                <p><strong>IA de Régulation locale :</strong> A.R.I.A.N.E.-LZ opérationnelle.</p>
+            </div>
+
+            <div class="wiki-card">
+                <h2>EXTRAIT DE L'AUDIT DU SITE (JANVIER 2026)</h2>
+                <div style="background: rgba(0,0,0,0.5); padding: 15px; border-left: 3px solid var(--border-highlight); font-family: monospace; font-size: 0.85rem;">
+                    <p style="color:var(--accent-ice);">À : DIRECTION DU SITE LAZARE / CONSEIL O5 [CANAL CRYPTÉ NIVEAU 5]</p>
+                    <p style="color:var(--text-muted);">OBJET : RAPPORT D'INTÉGRITÉ STRUCTURELLE ET ÉNERGÉTIQUE — BILAN ANNUEL 2026</p>
+                    <br>
+                    <p>1. Intégrité de la roche mère (Granit Laurentien) : STABLE à 99,4 %. Aucune fissure traversante détectée entre les niveaux -600m et -1400m.</p>
+                    <p>2. Stabilité de SCP-LAZARE-01 : NOMINALE. Fréquence des oscillations lumineuses conforme aux relevés post-2011.</p>
+                    <p style="color:var(--alert-amber);">3. Anomalie persistante [ALERTE SILENCIEUSE] : Une consommation électrique non répertoriée de 1,8 MW continue d'être drainée vers le réseau inférieur condamné (Secteur-00). Conformément à l'Ordre O5 du 17/09/2011, aucune équipe de maintenance n'a été dépêchée pour couper la ligne.</p>
+                    <p>4. Recommandation système : Maintenir le protocole d'ignorance active pour l'ensemble du personnel de niveau 1 à 4.</p>
+                    <p style="color:var(--accent-ice);">[FIN DE TRANSMISSION]</p>
+                </div>
+            </div>
+        </main>
     </div>
 
     <footer>
-        <p>SCiPNET // SITE LAZARE // ARCHIVES CENTRALES DE LA FONDATION SCP</p>
+        <p>FONDATION SCP // ARCHIVES CENTRALES DU SITE-LZ // DIFFUSION COMPARTIMENTÉE</p>
     </footer>
     <script src="script.js"></script>
 </body>
