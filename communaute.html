@@ -3,42 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SITE LAZARE // Hub Communauté</title>
+    <title>Site-LZ // Espace Joueurs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="brand">
-            <h1>COMMUNAUTÉ DU SITE LAZARE // HORS-RP</h1>
-            <p>Serveur Discord & Sessions Roblox SCP: Roleplay</p>
+    <header id="header">
+        <div class="header-content">
+            <div class="scp-logo-badge">SCP</div>
+            <div class="header-titles">
+                <h1>SITE LAZARE (SITE-LZ)</h1>
+                <p>Espace Communauté // Hors-RP (OOC)</p>
+            </div>
         </div>
-        <div class="badge-alert" style="border-color:var(--alert-amber); color:var(--alert-amber);">ESPACE JOUEURS</div>
     </header>
 
-    <nav>
-        <a href="index.html" class="nav-link">[01] Terminal</a>
-        <a href="lore-public.html" class="nav-link">[02] Lore Public</a>
-        <a href="scps.html" class="nav-link">[03] Registre SCP</a>
-        <a href="secteur00.html" class="nav-link restricted">[04] Secteur-00</a>
-        <a href="protocoles.html" class="nav-link">[05] Protocoles & Alertes</a>
-        <a href="effectifs.html" class="nav-link">[06] Effectifs</a>
-        <a href="menaces.html" class="nav-link">[07] Menaces</a>
-        <a href="communaute.html" class="nav-link active ooc">[HORS-RP] Discord</a>
-    </nav>
+    <div id="layout">
+        <nav id="sidebar">
+            <div class="sidebar-title">Base de Données</div>
+            <a href="index.html" class="side-link">Hub Principal</a>
+            <a href="dossier.html" class="side-link">Tome I : Dossier & Histoire</a>
+            <a href="architecture.html" class="side-link">Tome II : Cartographie</a>
+            <a href="scp-lazare-01.html" class="side-link">Tome III : SCP-LAZARE-01</a>
+            <a href="factions-alertes.html" class="side-link">Tome IV : Factions & Alertes</a>
+            <div class="sidebar-title">Niveau 5 (Restreint)</div>
+            <a href="archives-o5.html" class="side-link o5">Tome V : Archives O5</a>
+            <div class="sidebar-title">Espace Hors-RP</div>
+            <a href="communaute.html" class="side-link active ooc">Roblox & Discord</a>
+        </nav>
 
-    <div class="container">
-        <div class="card" style="border-color: var(--alert-amber);">
-            <h2 style="color:var(--alert-amber);">REJOINDRE LE PROJET SUR ROBLOX</h2>
-            <p style="line-height: 1.6; color: var(--text-secondary); margin-bottom: 20px;">
-                Le projet Site Lazare se déroule sur <strong>SCP: Roleplay (Roblox)</strong>. Rejoignez notre serveur Discord officiel pour vous faire recruter, participer aux entraînements de la RRT, aux recherches sur les anomalies dimensionnelles ou aux patrouilles des Gardiens de Réalité.
-            </p>
+        <main id="content">
+            <h1 class="page-title">ESPACE COMMUNAUTÉ // ROBLOX RP</h1>
 
-            <a href="https://discord.gg/tjZvkkUbhM" target="_blank" class="btn-action">REJOINDRE LE SERVEUR DISCORD</a>
-        </div>
+            <div class="wiki-card" style="border-color:var(--alert-amber);">
+                <h2 style="color:var(--alert-amber);">PROJET ROLEPLAY SUR SCP: ROLEPLAY (ROBLOX)</h2>
+                <p style="margin-bottom:15px; color:var(--text-muted); line-height:1.6;">
+                    Le projet Site Lazare est entièrement joué et mis en scène sur le jeu <strong>SCP: Roleplay</strong> sur Roblox.
+                </p>
+                <p style="margin-bottom:20px;">
+                    Rejoignez notre serveur Discord officiel pour consulter les annonces de sessions, faire vos candidatures pour intégrer la Sécurité, la RRT, le Département Scientifique ou postuler pour rejoindre l'Unité Bravo-6.
+                </p>
+
+                <a href="https://discord.gg/tjZvkkUbhM" target="_blank" class="btn-action">REJOINDRE LE SERVEUR DISCORD</a>
+            </div>
+        </main>
     </div>
 
     <footer>
-        <p>SCiPNET // SITE LAZARE // ROBLOX SCP: ROLEPLAY</p>
+        <p>FONDATION SCP // ARCHIVES CENTRALES DU SITE-LZ // ROBLOX SCP: ROLEPLAY</p>
     </footer>
     <script src="script.js"></script>
 </body>
